@@ -1,24 +1,58 @@
-import logo from './logo.svg';
-import './App.css';
+import { Box, createTheme, ThemeProvider } from "@mui/material";
+import React from "react";
+import AnimatedCharacterBackground from "./AnimatedCharacterBackground";
+import About from "./components/About";
+import Experience from "./components/Experience";
+import Footer from "./components/Footer";
+import Home from "./components/Home";
+import Navbar from "./components/Navbar";
+import Projects from "./components/Projects";
+import Skillss from "./components/Skills";
+
+const theme = createTheme({
+  typography: {
+    fontFamily: "Courier Prime, monospace",
+    allVariants: {
+      color: "#FFFFFF", // Set the default text color to white for all Typography components
+    },
+  },
+});
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <ThemeProvider theme={theme}>
+      <Box>
+        <Box
+          sx={{
+            position: "fixed",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+          }}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          <AnimatedCharacterBackground />
+        </Box>
+
+        <Box
+          sx={{
+            position: "relative",
+            zIndex: 1,
+            minHeight: "100vh", // Add a minimum height to the content container to push content below the viewport
+          }}
+        >
+          <Box px={{ xs: 2, md: 15 }} py={4}>
+            <Navbar />
+            <Home />
+            <About />
+            <Skillss />
+            <Experience />
+            <Projects />
+          </Box>
+          <Footer />
+        </Box>
+      </Box>
+    </ThemeProvider>
   );
 }
 
