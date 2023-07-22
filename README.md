@@ -35,6 +35,9 @@ In the future, I plan to make the following improvements to my portfolio:
 - Expand the "Skills" section to include more technologies and tools I become proficient in. 🛠️💪
 - Implement a blog section to share my insights, experiences, and tutorials. ✍️📝
 
+## Credits
+- credit to Hadrien59 - Sketchfab for the beautiful 3d model ❤️
+
 ## Conclusion 🎉
 
 My portfolio is a true representation of my passion for web development and design. It serves as a platform to showcase my expertise and achievements while creating a memorable and enjoyable user experience.
