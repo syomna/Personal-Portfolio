@@ -4,7 +4,7 @@ import { Grey } from "../utils/constants";
 import GradientBox from "./GradientBox";
 import MotionLayout from "./MotionLayout";
 import Robot from "./Robot";
-import cv from "../assets/Yomna_Salah Attallah_Resume.pdf";
+import cv from "../assets/Yomna_Salah_Software_Developer.pdf";
 const Home = () => {
   return (
     <MotionLayout>
@@ -23,7 +23,7 @@ const Home = () => {
           >
             <Box
               onClick={() => {
-                const fileName = "Yomna_Salah_Attallah_Resume.pdf";
+                const fileName = "Yomna_Salah_Software_Developer.pdf";
                 const filePath = cv;
                 const link = document.createElement("a");
                 link.setAttribute("download", fileName);
