@@ -7,7 +7,8 @@ import Footer from "./components/Footer";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
-import Skillss from "./components/Skills";
+import Skills from "./components/Skills";
+import ContactForm from "./components/ContactForm";
 
 const theme = createTheme({
   typography: {
@@ -22,6 +23,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <Box>
+        {/* Animated background, positioned absolutely behind content */}
         <Box
           sx={{
             position: "fixed",
@@ -29,25 +31,34 @@ function App() {
             left: 0,
             width: "100%",
             height: "100%",
+            zIndex: 0, // Ensure this is behind everything else
           }}
         >
           <AnimatedCharacterBackground />
         </Box>
 
+        {/* Content wrapper, including the Navbar and page sections */}
         <Box
           sx={{
             position: "relative",
             zIndex: 1,
-            minHeight: "100vh", // Add a minimum height to the content container to push content below the viewport
+            minHeight: "100vh",
           }}
         >
-          <Box px={{ xs: 2, md: 15 }} py={4}>
-            <Navbar />
+          <Navbar />
+          <Box
+            sx={{
+              pt: 4,
+              px: { xs: 2, md: 15 },
+              py: 4,
+            }}
+          >
             <Home />
             <About />
-            <Skillss />
+            <Skills />
             <Experience />
             <Projects />
+            <ContactForm />
           </Box>
           <Footer />
         </Box>

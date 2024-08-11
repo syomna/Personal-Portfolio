@@ -39,7 +39,9 @@ const Experience = () => {
                 </Typography>
                 <Box mt={1}>
                   {ex.description.map((d) => (
-                    <Typography key={d} fontSize={14}>{d}</Typography>
+                    <Typography key={d} fontSize={14}>
+                      {d}
+                    </Typography>
                   ))}
                 </Box>
               </Box>

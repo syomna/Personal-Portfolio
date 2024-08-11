@@ -1,70 +1,93 @@
-import { Box, Popover, Stack, Typography, useMediaQuery } from "@mui/material";
 import React, { useState } from "react";
-import GradientBox from "./GradientBox";
+import {
+  AppBar,
+  Box,
+  Button,
+  IconButton,
+  Menu,
+  MenuItem,
+  Stack,
+  Toolbar,
+  useMediaQuery,
+} from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
+import { useTheme } from "@mui/material/styles";
 
 const Navbar = () => {
   const items = ["About", "Experience", "Projects", "Contact"];
-    const isMedium = useMediaQuery("(max-width: 900px)");
-    
-     const [isPopoverOpen, setPopoverOpen] = useState(false);
+  const theme = useTheme();
+  const isMedium = useMediaQuery(theme.breakpoints.down("md"));
 
-     const handlePopoverOpen = () => {
-       setPopoverOpen(true);
-     };
+  const [anchorEl, setAnchorEl] = useState(null);
 
-     const handlePopoverClose = () => {
-       setPopoverOpen(false);
-     };
+  const handleMenuOpen = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleMenuClose = () => {
+    setAnchorEl(null);
+  };
+
   return (
-    <Stack
-      direction="row"
+    <AppBar
       position="fixed"
-      alignItems="center"
-      gap={isMedium ? "74vw" : "45vw"}
-      sx={{ zIndex: 2 }}
+      sx={{
+        backgroundColor: "rgba(0, 0, 0, 0.2)",
+        boxShadow: "0px 4px 5px rgba(123, 50, 255, 0.5)",
+      }}
     >
-      <Box component="img" src="/logo.png" height={45} width={45} />
-      <Stack direction="row" display={{ xs: "none", md: "flex" }} gap={2}>
-        {items.map((i) => (
-          <GradientBox key={i} customStyle={{ height: "2rem", width: "6rem" }}>
-            <a href={`#${i}`}>
-              <Typography  fontSize={12}>
+      <Toolbar sx={{ justifyContent: "space-between", px: { xs: 2, md: 15 } }}>
+        <Box component="img" src="/logo.png" height={45} alt="Logo" />
+
+        {isMedium ? (
+          <>
+            <IconButton edge="end" color="inherit" onClick={handleMenuOpen}>
+              <MenuIcon />
+            </IconButton>
+            <Menu
+              anchorEl={anchorEl}
+              open={Boolean(anchorEl)}
+              onClose={handleMenuClose}
+              PaperProps={{
+                sx: {
+                  backgroundColor: "rgba(0, 0, 0, 0.8)", // Dark background for the dropdown menu
+                },
+              }}
+            >
+              {items.map((i) => (
+                <MenuItem key={i} onClick={handleMenuClose}>
+                  <a
+                    href={`#${i}`}
+                    style={{ color: "inherit", textDecoration: "none" }}
+                  >
+                    {i}
+                  </a>
+                </MenuItem>
+              ))}
+            </Menu>
+          </>
+        ) : (
+          <Stack direction="row" spacing={3}>
+            {items.map((i) => (
+              <Button
+                key={i}
+                href={`#${i}`}
+                sx={{
+                  color: "white",
+                  textTransform: "none",
+                  transition: "transform 0.3s ease-in-out",
+                  "&:hover": {
+                    transform: "scale(1.1)",
+                  },
+                }}
+              >
                 {i}
-              </Typography>
-            </a>
-          </GradientBox>
-        ))}
-      </Stack>
-      <MenuIcon
-        onClick={handlePopoverOpen}
-        sx={{ color: "white", display: { xs: "flex", md: "none" } }}
-      />
-      <Popover
-        open={isPopoverOpen}
-        onClose={handlePopoverClose}
-        anchorReference="anchorPosition"
-        anchorPosition={{ top: 50, left: 200 }}
-        PaperProps={{
-          sx: {
-            backgroundColor: "black",
-          },
-        }}
-      >
-        {/* Your popover content goes here */}
-        <Box p={2} sx={{ borderRadius: 4 }}>
-          {items.map((i) => (
-            <Box key={i} onClick={handlePopoverClose}>
-              <a href={`#${i}`}>
-                <Typography  fontSize={14} mt={1}>
-                  {i}
-                </Typography>
-              </a>
-            </Box>
-          ))}
-        </Box>
-      </Popover>
-    </Stack>
+              </Button>
+            ))}
+          </Stack>
+        )}
+      </Toolbar>
+    </AppBar>
   );
 };
 

@@ -1,13 +1,9 @@
-import { Box } from "@mui/material";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import MailIcon from "@mui/icons-material/Mail";
-import upwork from "../assets/upwork.svg";
+import { Favorite } from "@mui/icons-material";
+import { Box, Typography } from "@mui/material";
 
 const Footer = () => {
   return (
     <Box
-      id="Contact"
       component="footer"
       display="flex"
       alignItems="center"
@@ -29,62 +25,7 @@ const Footer = () => {
         <span>Yomna Salah &copy; {new Date().getFullYear()}</span>
       </Box>
 
-      <Box display="flex" gap={2}>
-        <a
-          href="https://www.linkedin.com/in/yomna-s/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <LinkedInIcon
-            sx={{
-              color: "#0277b5",
-              "&:hover": {
-                transform: "scale(1.1)",
-              },
-            }}
-          />
-        </a>
-        <a
-          href="https://github.com/syomna"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <GitHubIcon
-            sx={{
-              color: "#0277b5",
-              "&:hover": {
-                transform: "scale(1.1)",
-              },
-            }}
-          />
-        </a>
-        <a href="mailto:syomna444@gmail.com">
-          <MailIcon
-            sx={{
-              "&:hover": {
-                transform: "scale(1.1)",
-              },
-            }}
-          />
-        </a>
-        <a
-          href="https://www.upwork.com/freelancers/~0155980773e7307264"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Box
-            component="img"
-            src={upwork}
-            alt="upwork"
-            height={25}
-            sx={{
-              "&:hover": {
-                transform: "scale(1.1)",
-              },
-            }}
-          />
-        </a>
-      </Box>
+      <Typography>Made with {<Favorite sx={{ color: "red" }} />}</Typography>
     </Box>
   );
 };

@@ -18,10 +18,15 @@ import threejs from "../assets/threejs.svg";
 import artigen from "../assets/projects/artigen.jpeg";
 import chatty from "../assets/projects/chatty.jpeg";
 import ipark from "../assets/projects/ipark.jpeg";
-import nanny from "../assets/projects/nanny.jpg";
-import whosapp from "../assets/projects/whosapp.jpg";
-import football from "../assets/projects/football.png";
-export const MainColor = "#6969cd";
+import AKM from "../assets/projects/AKM.jpeg";
+import MyEyes from "../assets/projects/MyEyes.jpeg";
+import NannyFinder from "../assets/projects/NannyFinder.jpeg";
+import Azkari from "../assets/projects/Azkari.jpeg";
+import GhanaFootball from "../assets/projects/GhanaFootball.jpeg";
+import ShopManagment from "../assets/projects/ShopManagment.jpeg";
+import BostaClone from "../assets/projects/BostaClone.jpeg";
+
+export const MainColor = "rgba(123, 50, 255, 0.5)";
 export const Grey = "#d4d0d9";
 export const Skillss = [
   {
@@ -88,6 +93,18 @@ export const Skillss = [
 
 export const WorkingExperience = [
   {
+    img: Upwork,
+    title: "Software Developer",
+    place: "Upwork",
+    date: "Aug 2021 - Present",
+    description: [
+      "• Collaborated with clients to develop seamless mobile applications using Flutter framework.",
+      "• Leveraged Firebase for real-time database, user authentication, and cloud storage. ",
+      "• Integrated various APIs to enhance app functionalityand enable data synchronization with external services.",
+      "• Developed captivating, responsive user interfaces using React.js and Next.js for web projects.",
+    ],
+  },
+  {
     img: Iti,
     title: "Front-end & Cross-platform Intern",
     place: "Information Technology Institute (ITI) , Cairo University",
@@ -101,26 +118,82 @@ export const WorkingExperience = [
       "• Experienced in cross-platform mobile app development (React Native, Flutter)",
     ],
   },
-  {
-    img: Upwork,
-    title: "Software Developer",
-    place: "Upwork",
-    date: "Aug 2021 - Present",
-    description: [
-      "• Collaborated with clients to develop seamless mobile applications using Flutter framework.",
-      "• Leveraged Firebase for real-time database, user authentication, and cloud storage. ",
-      "• Integrated various APIs to enhance app functionalityand enable data synchronization with external services.",
-      "• Developed captivating, responsive user interfaces using React.js and Next.js for web projects.",
-    ],
-  },
 ];
 
-export const Projectss = [
+export const WebProjects = [
+  {
+    img: ShopManagment,
+    title: "Shop Managment",
+    subTitle:
+      "A web app that allows users to easily add, edit, remove, and manage their shops, providing a seamless way to organize and update shop information.",
+    tech: [
+      {
+        name: "react",
+        color: "#a1e9ff",
+      },
+      {
+        name: "material ui",
+        color: "#ffc8ae",
+      },
+      {
+        name: "typescript",
+        color: "#a5d6a7",
+      },
+      {
+        name: "redux",
+        color: "#ffcc80",
+      },
+      {
+        name: "firebase",
+        color: "#a5d6a7",
+      },
+      {
+        name: "google-cloud",
+        color: "#ffc8ae",
+      },
+    ],
+    demo: "https://drive.google.com/file/d/1qDVfS7peqUMQ3iJJ8kgewB7wutWEQvIg/view?usp=drivesdk",
+    github: "https://github.com/syomna/shop-crud",
+  },
+  {
+    img: BostaClone,
+    title: "Bosta Clone",
+    subTitle:
+      "A user-friendly web app that allows users to quickly retrieve and track shipment details in real-time.",
+    tech: [
+      {
+        name: "react",
+        color: "#a1e9ff",
+      },
+      {
+        name: "material ui",
+        color: "#ffc8ae",
+      },
+      {
+        name: "redux",
+        color: "#ffcc80",
+      },
+      {
+        name: "react-hooks",
+        color: "#a1e9ff",
+      },
+      {
+        name: "api-integration",
+        color: "#a5d6a7",
+      },
+      {
+        name: "localization",
+        color: "#ffc8ae",
+      },
+    ],
+    demo: "https://drive.google.com/file/d/1GAigfbeURc8FDcbZYMeGrApJc9ZXaOm0/view?usp=sharing",
+    github: "https://github.com/syomna/Bosta_Task",
+  },
   {
     img: artigen,
     title: "ArtiGen",
     subTitle:
-      "ArtiGen is a React.js project for generating images from text using the power of AI. It provides a user-friendly interface that allows users to enter text or use speech-to-text functionality to generate images. The generated images can be downloaded by the users.",
+      "A web app that uses AI to generate images from text or speech, offering a simple interface for creating and downloading custom images.",
     tech: [
       {
         name: "react",
@@ -146,7 +219,7 @@ export const Projectss = [
     img: chatty,
     title: "Chatty",
     subTitle:
-      "Chatty is a dynamic chat web application that allows users to connect and communicate in real-time. It offers a range of features such as secure login/register system, real-time chatting, emojis, profile information editing, and a customizable dark mode and light mode.",
+      "A dynamic web app for real-time communication, featuring secure login, emojis, profile editing, and customizable dark/light modes",
     tech: [
       {
         name: "react",
@@ -177,7 +250,7 @@ export const Projectss = [
     img: ipark,
     title: "IPark",
     subTitle:
-      "IPark is a web & mobile application that provides parking solutions for users. It allows users to find the nearest available garage, reserve it using either cash or card payment methods, and view their reservation history. Additionally, an admin dashboard is available for approving or unapproving signed garages.",
+      "A web and mobile app offering parking solutions, allowing users to find, reserve, and pay for parking spots while managing reservations. An admin dashboard is included for managing garage approvals.",
     tech: [
       {
         name: "react",
@@ -211,12 +284,87 @@ export const Projectss = [
     demo: "https://drive.google.com/drive/folders/1Uq7eTYdla0i_A9y6TSm7du9MjH2trya6?usp=drive_link",
     github: "https://github.com/Nader-CS/parking-system",
   },
+];
 
+export const MobileProjects = [
   {
-    img: nanny,
+    img: MyEyes,
+    title: "MyEyes - helps vision impaired people",
+    subTitle:
+      "A mobile app designed to empower vision-impaired individuals by enhancing their independence and accessibility, helping them navigate their environment and access information with ease.",
+    tech: [
+      {
+        name: "flutter",
+        color: "#a1e9ff",
+      },
+      {
+        name: "gemini-ai",
+        color: "#ffcc80",
+      },
+      {
+        name: "firebase-crashlytics",
+        color: "#ffc8ae",
+      },
+      {
+        name: "google-analytics",
+        color: "#ffcc80",
+      },
+      {
+        name: "text-to-speech",
+        color: "#a5d6a7",
+      },
+      {
+        name: "provider",
+        color: "#a5d6a7",
+      },
+    ],
+    demo: "https://www.youtube.com/shorts/S7HYC4YXEwA",
+    github: "https://github.com/syomna/my-eyes",
+  },
+  {
+    img: AKM,
+    title: "AKM - العبد الكريم للخرسانة",
+    subTitle:
+      "A powerful and user-friendly app designed for the construction industry. The app enables users to easily place orders for concrete, track real-time delivery status, and ensure the quality of received concrete.",
+    tech: [
+      {
+        name: "flutter",
+        color: "#a1e9ff",
+      },
+      {
+        name: "firebase",
+        color: "#ffcc80",
+      },
+      {
+        name: "api-integration",
+        color: "#ffc8ae",
+      },
+      {
+        name: "google-cloud",
+        color: "#ffcc80",
+      },
+      {
+        name: "localization",
+        color: "#a5d6a7",
+      },
+      {
+        name: "fcm",
+        color: "#a1e9ff",
+      },
+      {
+        name: "bloc",
+        color: "#a5d6a7",
+      },
+    ],
+    isApp: true,
+    playStore: "https://play.google.com/store/apps/details?id=com.sti.akm",
+    appStore: "https://apps.apple.com/sa/app/akm-للخرسانة/id6476569574?l=ar",
+  },
+  {
+    img: NannyFinder,
     title: "NannyFinder",
     subTitle:
-      "Nanny Finder is a comprehensive mobile app designed for hassle-free nanny job applications, advanced profile filtering, and seamless communication. Experience the convenience of a user-friendly web version and an intuitive admin dashboard, ensuring efficient nanny recruitment like never before.",
+      "A comprehensive mobile app for easy nanny job applications, advanced profile filtering, and seamless communication, with a user-friendly web version and an intuitive admin dashboard for efficient recruitment.",
     tech: [
       {
         name: "flutter",
@@ -250,42 +398,67 @@ export const Projectss = [
   },
 
   {
-    img: whosapp,
-    title: "Whosapp",
+    img: Azkari,
+    title: "أذكــــاري | Azkari",
     subTitle:
-      "Whosapp is an innovative mobile app that revolutionizes how you discover and connect with nearby service providers. Seamlessly explore a wide range of services as providers showcase their expertise, ensuring you find the perfect match for your needs. ",
+      "Your daily companion on your path towards closeness to Allah. The app offers you a variety of supplications (Azkar) snd prayers (Ad'iyah) to elevate your worship and strengthen your relationship with Allah.",
     tech: [
       {
         name: "flutter",
         color: "#a1e9ff",
       },
       {
-        name: "firebase",
-        color: "#ffcc80",
-      },
-      {
-        name: "fcm",
+        name: "notifications",
         color: "#ffc8ae",
       },
       {
-        name: "google-cloud",
-        color: "#ffcc80",
-      },
-      {
-        name: "bloc",
+        name: "provider",
         color: "#a5d6a7",
       },
     ],
     isApp: true,
-    playStore: "https://play.google.com/store/apps/details?id=com.whos.whosapp",
-    appStore: "https://apps.apple.com/eg/app/whosapp-app/id1642543173",
+    playStore:
+      "https://play.google.com/store/apps/details?id=com.yomna.azkar_app",
+    appStore: "https://apps.apple.com/eg/app/أذكــــاري-azkari/id6479560831",
   },
 
+  // {
+  //   img: whosapp,
+  //   title: "Whosapp",
+  //   subTitle:
+  //     "Whosapp is an innovative mobile app that revolutionizes how you discover and connect with nearby service providers. Seamlessly explore a wide range of services as providers showcase their expertise, ensuring you find the perfect match for your needs. ",
+  //   tech: [
+  //     {
+  //       name: "flutter",
+  //       color: "#a1e9ff",
+  //     },
+  //     {
+  //       name: "firebase",
+  //       color: "#ffcc80",
+  //     },
+  //     {
+  //       name: "fcm",
+  //       color: "#ffc8ae",
+  //     },
+  //     {
+  //       name: "google-cloud",
+  //       color: "#ffcc80",
+  //     },
+  //     {
+  //       name: "bloc",
+  //       color: "#a5d6a7",
+  //     },
+  //   ],
+  //   isApp: true,
+  //   playStore: "https://play.google.com/store/apps/details?id=com.whos.whosapp",
+  //   appStore: "https://apps.apple.com/eg/app/whosapp-app/id1642543173",
+  // },
+
   {
-    img: football,
+    img: GhanaFootball,
     title: "Ghana Football",
     subTitle:
-      "Ghana Football is a ultimate mobile app for football enthusiasts. Immerse yourself in live football matches and never miss a moment of the action. Stay up-to-date with the latest news, scores, and highlights, all in one convenient platform. ",
+      "An ultimate mobile app for football enthusiasts. Immerse yourself in live football matches and never miss a moment of the action. Stay up-to-date with the latest news, scores, and highlights, all in one convenient platform. ",
     tech: [
       {
         name: "flutter",
@@ -296,7 +469,7 @@ export const Projectss = [
         color: "#ffcc80",
       },
       {
-        name: "api",
+        name: "api-integration",
         color: "#ffc8ae",
       },
       {
