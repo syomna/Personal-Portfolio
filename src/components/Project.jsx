@@ -74,10 +74,8 @@ const Project = ({ p }) => {
           <Typography fontSize={18} fontWeight="bold" pb={2}>
             {p.title}
           </Typography>
-          <Box height={100}>
-            <Typography fontSize={14}>{p.subTitle}</Typography>
-          </Box>
-          <Stack height={50} mt={2} direction="row" gap={1}>
+          <Typography fontSize={14}>{p.subTitle}</Typography>
+          <Stack mt={2} mb={1} direction="row" gap={1}>
             <Typography fontSize={14}>Technologies:</Typography>
             <Stack direction="row" flexWrap="wrap" gap={1}>
               {p.tech.map((t) => (
