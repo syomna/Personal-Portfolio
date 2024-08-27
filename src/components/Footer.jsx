@@ -8,7 +8,7 @@ const Footer = () => {
       display="flex"
       alignItems="center"
       justifyContent="space-between"
-      mt={10}
+      mt={5}
       py={4}
       px={{ xs: 2, md: 10 }}
       sx={{ backgroundColor: "rgba(0,0,0,0.4)", color: "white" }}

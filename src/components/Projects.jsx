@@ -17,7 +17,7 @@ const Projects = () => {
   };
   return (
     <MotionLayout>
-      <Stack pt={10} id="Projects">
+      <Stack pt={5} id="Projects">
         <Typography fontWeight="bold" variant="h4">
           Projects
         </Typography>
@@ -57,7 +57,7 @@ const Projects = () => {
         </Tabs>
 
         {activeTab === 0 && (
-          <Grid container spacing={4}>
+          <Grid container spacing={2}>
             {MobileProjects.map((p, index) => (
               <Grid item xs={12} md={6} key={index}>
                 <Project p={p} />
@@ -67,7 +67,7 @@ const Projects = () => {
         )}
 
         {activeTab === 1 && (
-          <Grid container spacing={4}>
+          <Grid container spacing={2}>
             {WebProjects.map((p, index) => (
               <Grid item xs={12} md={6} key={index}>
                 <Project p={p} />

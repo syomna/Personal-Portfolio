@@ -186,7 +186,7 @@ const ContactForm = () => {
           <Typography variant="h5" mb={2}>
             Contact Me Via
           </Typography>
-          <Stack spacing={2} mt={5}>
+          <Stack spacing={2} mt={2}>
             <Button
               href="https://github.com/syomna"
               target="_blank"
@@ -197,7 +197,7 @@ const ContactForm = () => {
                 borderRadius: "8px",
                 "&:hover": { backgroundColor: "#5a44e0", cursor: "pointer" },
                 textAlign: "center",
-                width: "120%",
+                width: "200%",
               }}
             >
               <Typography>GitHub</Typography>
@@ -213,7 +213,7 @@ const ContactForm = () => {
                 borderRadius: "8px",
                 "&:hover": { backgroundColor: "#5a44e0", cursor: "pointer" },
                 textAlign: "center",
-                width: "120%",
+                width: "200%",
               }}
             >
               <Typography>LinkedIn</Typography>
@@ -228,7 +228,7 @@ const ContactForm = () => {
                 borderRadius: "8px",
                 "&:hover": { backgroundColor: "#5a44e0", cursor: "pointer" },
                 textAlign: "center",
-                width: "120%",
+                width: "200%",
               }}
             >
               <Typography>Upwork</Typography>

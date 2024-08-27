@@ -6,7 +6,7 @@ const ButtonStyle = ({ children }) => {
   return (
     <Box
       sx={{
-        width: { xs: "40%", md: "30%" },
+        width: { xs: "50%", md: "40%" },
         py: 1,
         backgroundColor: MainColor,
         borderRadius: "8px",

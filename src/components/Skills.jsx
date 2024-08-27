@@ -8,14 +8,14 @@ import { Skillss } from "../utils/constants";
 const Skills = () => {
   return (
     <MotionLayout>
-      <Stack pt={10}>
+      <Stack pt={5}>
         <Typography fontWeight="bold" variant="h4">
           Technologies
         </Typography>
         <Stack
           mt={4}
           direction="row"
-          justifyContent={{ xs: "center"  , md: "start"}}
+          justifyContent={{ xs: "center", md: "start" }}
           flexWrap="wrap"
           gap={4}
         >

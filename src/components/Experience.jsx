@@ -7,7 +7,7 @@ import MotionLayout from "./MotionLayout";
 const Experience = () => {
   return (
     <MotionLayout>
-      <Stack pt={10} id="Experience">
+      <Stack pt={5} id="Experience">
         <Typography fontWeight="bold" variant="h4">
           Working Experience
         </Typography>
@@ -22,7 +22,7 @@ const Experience = () => {
                 <Box
                   sx={{
                     borderRight: "2px solid #ccc", // Add a right border to create the divider effect
-                    height: { xs: "25rem", md: "14rem" },
+                    height: { xs: "22rem", md: "14rem" },
                     width: "6px",
                     mt: 0.5,
                   }}

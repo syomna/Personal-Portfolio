@@ -28,11 +28,12 @@ const Project = ({ p }) => {
 
   return (
     <MotionLayout key={p.title}>
-      <Stack key={p.title} alignItems="center" gap={4}>
+      <Stack key={p.title} alignItems="center" gap={2}>
         <Box
           component="img"
           src={p.img}
           alt={p.title}
+          height={{ xs: "100%", md: "10rem", lg: "15rem" }}
           width={{ xs: "100%", md: "100%" }}
           sx={{
             borderRadius: 2,
@@ -74,17 +75,21 @@ const Project = ({ p }) => {
           <Typography fontSize={18} fontWeight="bold" pb={2}>
             {p.title}
           </Typography>
-          <Typography fontSize={14}>{p.subTitle}</Typography>
-          <Stack mt={2} mb={1} direction="row" gap={1}>
-            <Typography fontSize={14}>Technologies:</Typography>
-            <Stack direction="row" flexWrap="wrap" gap={1}>
-              {p.tech.map((t) => (
-                <Typography key={t.name} fontSize={12} color={t.color}>
-                  {t.name}
-                </Typography>
-              ))}
+          <Box height={{ xs: "100%", md: "8rem", lg: "5rem" }}>
+            <Typography fontSize={14}>{p.subTitle}</Typography>
+          </Box>
+          <Box height={{ xs: "100%", md: "6rem", lg: "3rem" }}>
+            <Stack mt={2} mb={1} direction="row" gap={1}>
+              <Typography fontSize={14}>Technologies:</Typography>
+              <Stack direction="row" flexWrap="wrap" gap={1}>
+                {p.tech.map((t) => (
+                  <Typography key={t.name} fontSize={12} color={t.color}>
+                    {t.name}
+                  </Typography>
+                ))}
+              </Stack>
             </Stack>
-          </Stack>
+          </Box>
 
           <Stack mt={2} direction="row" gap={2}>
             <ButtonStyle>

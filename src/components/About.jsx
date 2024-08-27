@@ -5,7 +5,7 @@ import MotionLayout from "./MotionLayout";
 const About = () => {
   return (
     <MotionLayout>
-      <Stack pt={15} id="About" width={{ xs: "100%", md: "60%" }}>
+      <Stack pt={5} id="About" width={{ xs: "100%", md: "60%" }}>
         <Typography variant="h4" fontWeight="bold">
           About me
         </Typography>
