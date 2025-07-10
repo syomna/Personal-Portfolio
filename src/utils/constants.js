@@ -19,6 +19,7 @@ import artigen from "../assets/projects/artigen.jpeg";
 import chatty from "../assets/projects/chatty.jpeg";
 import ipark from "../assets/projects/ipark.jpeg";
 import AKM from "../assets/projects/AKM.jpeg";
+import PenPoints from "../assets/projects/PenPoints.jpeg";
 import MyEyes from "../assets/projects/MyEyes.jpeg";
 import NannyFinder from "../assets/projects/NannyFinder.jpeg";
 import Azkari from "../assets/projects/Azkari.jpeg";
@@ -98,10 +99,13 @@ export const WorkingExperience = [
     place: "Upwork",
     date: "Aug 2021 - Present",
     description: [
-      "• Collaborated with clients to develop seamless mobile applications using Flutter framework.",
-      "• Leveraged Firebase for real-time database, user authentication, and cloud storage. ",
-      "• Integrated various APIs to enhance app functionalityand enable data synchronization with external services.",
-      "• Developed captivating, responsive user interfaces using React.js and Next.js for web projects.",
+      "• Developed 15+ mobile applications from scratch using Flutter, delivering end-to-end solutions for diverse clients.",
+
+      "• Collaborated with clients to build seamless mobile apps and responsive React.js web UIs.",
+
+      "• Engineered app functionality via Firebase (real-time DB, auth, storage) and integrated various external APIs.",
+
+      "• Partnered with backend developers and UI/UX designers for user-friendly mobile and web solutions.",
     ],
   },
   {
@@ -287,6 +291,49 @@ export const WebProjects = [
 ];
 
 export const MobileProjects = [
+  {
+    img: PenPoints,
+    title: "PenPoints - interactive spelling coach",
+    subTitle:
+      "An AI-powered spelling coach for children. Kids write words, upload photos, and our app uses Cloud Vision API to analyze handwriting, highlighting errors with confidence scores. Empowers parents and teachers for effective learning.",
+    tech: [
+      {
+        name: "flutter",
+        color: "#a1e9ff",
+      },
+      {
+        name: "firebase",
+        color: "#ffcc80",
+      },
+
+      {
+        name: "google-vision-api",
+        color: "#ffcc80",
+      },
+      {
+        name: "cloud-functions",
+        color: "#a5d6a7",
+      },
+      {
+        name: "open-ai-api",
+        color: "#a5d6a7",
+      },
+      {
+        name: "firebase-analytics",
+        color: "#ffc8ae",
+      },
+
+      {
+        name: "bloc",
+        color: "#a5d6a7",
+      },
+    ],
+    isApp: true,
+    playStore:
+      "https://play.google.com/store/apps/details?id=com.mickaelrobin.wright&hl=en&pli=1",
+    appStore:
+      "https://apps.apple.com/eg/app/penpoints-fun-spelling-coach/id6737171584",
+  },
   {
     img: MyEyes,
     title: "MyEyes - helps vision impaired people",

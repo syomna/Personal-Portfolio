@@ -10,7 +10,7 @@ const About = () => {
           About me
         </Typography>
         <Typography pt={2}>
-          A passionate and versatile developer with over 2 years of experience
+          A passionate and versatile developer with over 3 years of experience
           in crafting innovative and user-friendly applications. Dedicated to
           continuous learning and growth, leveraging industry expertise to
           deliver exceptional results. Committed to creating visually stunning
